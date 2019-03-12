@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1812/c1/c156e13ddd316b2ba3.img.jpg_200x200_4dcee529.jpg',
-        title: '北京活的3D博物馆',
-        desc: '有八座古寺而得名，香山外另一爬山绝佳地有八座古寺而得名，香山外另一爬山绝佳地'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201307/18/73703f0304835b9ac8d65eac.jpg_200x200_12107416.jpg',
-        title: '北京活的3D博物馆',
-        desc: '有八座古寺而得名，香山外另一爬山绝佳地有八座古寺而得名，香山外另一爬山绝佳地'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_200x200_444cc7e8.jpg',
-        title: '北京活的3D博物馆',
-        desc: '有八座古寺而得名，香山外另一爬山绝佳地有八座古寺而得名，香山外另一爬山绝佳地'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/88/88b6e81d8506213a3.img.jpg_200x200_6d009208.jpg',
-        title: '北京活的3D博物馆',
-        desc: '有八座古寺而得名，香山外另一爬山绝佳地有八座古寺而得名，香山外另一爬山绝佳地'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
